@@ -36,8 +36,7 @@ Create a catkin workspace:
 
 ```bash
 mkdir -p asv_ws/src
-cd asv_ws
-catkin init
+catkin_init_workspace
 ```
 
 Configure catkin:
@@ -58,13 +57,21 @@ git clone https://github.com/LavrenovRoman/asv_wave_sim.git
 Compile the packages:
 
 ```bash
-catkin build
+cd asv_ws
+catkin_make
+```
+
+or:
+```bash
+cd asv_ws
+catkin_make -DCMAKE_BUILD_TYPE=RelWithDebInfo
 ```
 
 or with tests:
 
 ```bash
-catkin build --catkin-make-args run_tests
+cd asv_ws
+catkin_make --cmake-args run_tests
 ```
 
 ## Usage
