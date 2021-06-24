@@ -72,7 +72,7 @@ or with tests:
 ```bash
 cd asv_ws
 catkin_make --cmake-args run_tests
-```
+cd ```
 
 ## Usage
 
