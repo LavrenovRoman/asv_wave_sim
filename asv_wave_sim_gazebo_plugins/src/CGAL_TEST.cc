@@ -34,7 +34,7 @@
 
 #include <CGAL/boost/graph/Euler_operations.h>
 
-#include <tbb/tbb.h>
+//#include <tbb/tbb.h>
 
 #include <iostream>
 #include <iterator>
@@ -532,6 +532,7 @@ void TestSurfaceMeshWavefield()
   // }
 }
 
+/*
 void TestTBBParallelFor()
 {
   std::cout << "TestTBBParallelFor..." << std::endl;
@@ -560,6 +561,7 @@ void TestTBBParallelFor()
   for (auto v : a)
     std::cout << v << std::endl;
 }
+*/
 
 void TestVertexRangeIterator()
 {
@@ -615,7 +617,7 @@ void RunCGALTests()
   TestSurfaceMeshGrid();
   TestSurfaceMeshModifyGrid();
   TestSurfaceMeshWavefield();
-  TestTBBParallelFor();
+  //TestTBBParallelFor();
   TestVertexRangeIterator();
 }
 

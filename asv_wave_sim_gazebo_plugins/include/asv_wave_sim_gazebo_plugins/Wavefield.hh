@@ -22,9 +22,8 @@
 #define _ASV_WAVE_SIM_GAZEBO_PLUGINS_WAVEFIELD_HH_
 
 #include "asv_wave_sim_gazebo_plugins/CGALTypes.hh"
-
 #include <ignition/math/Pose3.hh>
-
+#include <sdf/sdf.hh>
 #include <memory>
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -80,7 +79,7 @@ namespace asv
     /// \brief Set the parameters from an SDF Element tree.
     ///
     /// \param[in] _sdf   The SDF Element tree containing the wave parameters.
-    public: void SetFromSDF(sdf::Element& _sdf);
+    public: void SetFromSDF(sdf::v9::Element& _sdf);
 
     /// \brief The number of wave components (3 max if visualisation required).
     public: size_t Number() const;

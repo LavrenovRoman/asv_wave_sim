@@ -2,7 +2,7 @@
 
 This package contains plugins that support the simulation of waves and surface vessels in Gazebo.  
 
-![Wave Simulation](https://github.com/srmainwaring/asv_wave_sim/wiki/images/ocean_waves_rs750.jpg)
+![Wave Simulation](https://github.com/LavrenovRoman/asv_wave_sim/wiki/images/ocean_waves_rs750.jpg)
 
 ## Dependencies
 
@@ -11,26 +11,14 @@ You will need a working installation of ROS and Gazebo in order to use this pack
 
 ## Ubuntu
 
-- Ubuntu 18.04
-- ROS Melodic Morenia
-- Gazebo version 9.0.0
+- Ubuntu 20.04
+- ROS Noetic
+- Gazebo version 11
 
 Install CGAL 4.13 libraries:
 
 ```bash
 sudo apt-get install libcgal-dev
-```
-
-### macOS
-
-- OSX 10.11.6
-- ROS Melodic Morenia
-- Gazebo version 9.6.0
-
-Install CGAL 4.13 libraries:
-
-```bash
-brew install cgal
 ```
 
 ## Installation
@@ -40,8 +28,8 @@ brew install cgal
 Source your ROS installation:
 
 ```bash
-source /opt/ros/melodic/setup.bash
-source /usr/local/share/gazebo-9/setup.bash
+source /opt/ros/noetic/setup.bash
+source /usr/share/gazebo-11/setup.sh
 ```
 
 Create a catkin workspace:
@@ -64,7 +52,7 @@ Clone the `asv_wave_sim` repository:
 
 ```bash
 cd src
-git clone https://github.com/srmainwaring/asv_wave_sim.git
+git clone https://github.com/LavrenovRoman/asv_wave_sim.git
 ```
 
 Compile the packages:
@@ -83,9 +71,9 @@ catkin build --catkin-make-args run_tests
 
 The wiki has details about how to configure and use the plugins:
 
-- [WavefieldPlugin](https://github.com/srmainwaring/asv_wave_sim/wiki/WavefieldPlugin)
-- [WavefieldVisualPlugin](https://github.com/srmainwaring/asv_wave_sim/wiki/WavefieldVisualPlugin)
-- [HydrodynamicsPlugin](https://github.com/srmainwaring/asv_wave_sim/wiki/HydrodynamicsPlugin)
+- [WavefieldPlugin](https://github.com/LavrenovRoman/asv_wave_sim/wiki/WavefieldPlugin)
+- [WavefieldVisualPlugin](https://github.com/LavrenovRoman/asv_wave_sim/wiki/WavefieldVisualPlugin)
+- [HydrodynamicsPlugin](https://github.com/LavrenovRoman/asv_wave_sim/wiki/HydrodynamicsPlugin)
 
 ## Tests
 
@@ -101,7 +89,7 @@ Manually run the tests:
 
 ## Examples
 
-![Wave Simulation](https://github.com/srmainwaring/asv_wave_sim/wiki/images/ocean_waves_box_example.gif)
+![Wave Simulation](https://github.com/LavrenovRoman/asv_wave_sim/wiki/images/ocean_waves_box_example.gif)
 
 Launch a Gazebo session with `roslaunch`:
 
@@ -136,22 +124,7 @@ Publish a hydrodynamics parameters message:
   --cDampR2 1
 ```
 
-For more detail see the [Example](https://github.com/srmainwaring/asv_wave_sim/wiki/Example) page in the wiki.
-
-## Build Status
-
-### Develop Job Status
-
-|    | Melodic |
-|--- |--- |
-| asv_wave_sim | [![Build Status](https://travis-ci.com/srmainwaring/asv_wave_sim.svg?branch=feature%2Ffft_waves)](https://travis-ci.com/srmainwaring/asv_wave_sim) |
-
-
-### Release Job Status
-
-|    | Melodic |
-|--- |--- |
-| asv_wave_sim | [![Build Status](https://travis-ci.com/srmainwaring/asv_wave_sim.svg?branch=master)](https://travis-ci.com/srmainwaring/asv_wave_sim) |
+For more detail see the [Example](https://github.com/LavrenovRoman/asv_wave_sim/wiki/Example) page in the wiki.
 
 ## License
 
@@ -170,6 +143,7 @@ file [LICENSE_THIRDPARTY](LICENSE_THIRDPARTY).
 
 ## Acknowledgments
 
+- Author of original version of this package for ROS Melodic: [asv_wave_sim](https://github.com/srmainwaring/asv_wave_sim)
 - Jacques Kerner's two part blog describing boat physics for games: [Water interaction model for boats in video games](https://www.gamasutra.com/view/news/237528/Water_interaction_model_for_boats_in_video_games.php) and [Water interaction model for boats in video games: Part 2](https://www.gamasutra.com/view/news/263237/Water_interaction_model_for_boats_in_video_games_Part_2.php).
 - The [CGAL](https://doc.cgal.org) libraries are used for the wave field and model meshes.
 - The [UUV Simulator](https://github.com/uuvsimulator/uuv_simulator) package for the orginal vertex shaders used in the wave field visuals.

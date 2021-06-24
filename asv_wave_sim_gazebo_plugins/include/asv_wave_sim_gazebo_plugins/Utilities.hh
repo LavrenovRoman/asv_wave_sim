@@ -20,6 +20,7 @@
 #define _ASV_WAVE_SIM_GAZEBO_PLUGINS_UTILITIES_HH_
 
 #include "asv_wave_sim_gazebo_plugins/CGALTypes.hh"
+#include <sdf/sdf.hh>
 
 #include <string>
 
@@ -54,7 +55,7 @@ namespace asv
     /// \param[in] _paramName   The parameter name as it appears in SDF.
     /// \param[in] _defaultVal  A default value for the parameter.
     /// \return                 The parameter value (or default value if not found).
-    public: static bool SdfParamBool(sdf::Element& _sdf,
+    public: static bool SdfParamBool(sdf::v9::Element& _sdf,
       const std::string &_paramName, const bool _defaultVal);
 
     /// \brief Extract a named size_t parameter from an SDF element.
@@ -63,7 +64,7 @@ namespace asv
     /// \param[in] _paramName   The parameter name as it appears in SDF.
     /// \param[in] _defaultVal  A default value for the parameter.
     /// \return                 The parameter value (or default value if not found).
-    public: static size_t SdfParamSizeT(sdf::Element& _sdf,
+    public: static size_t SdfParamSizeT(sdf::v9::Element& _sdf,
       const std::string &_paramName, const size_t _defaultVal);
 
     /// \brief Extract a named double parameter from an SDF element.
@@ -72,7 +73,7 @@ namespace asv
     /// \param[in] _paramName   The parameter name as it appears in SDF.
     /// \param[in] _defaultVal  A default value for the parameter.
     /// \return                 The parameter value (or default value if not found).
-    public: static double SdfParamDouble(sdf::Element& _sdf,
+    public: static double SdfParamDouble(sdf::v9::Element& _sdf,
       const std::string &_paramName, const double _defaultVal);
 
     /// \brief Extract a named string parameter from an SDF element.
@@ -81,7 +82,7 @@ namespace asv
     /// \param[in] _paramName   The parameter name as it appears in SDF.
     /// \param[in] _defaultVal  A default value for the parameter.
     /// \return                 The parameter value (or default value if not found).
-    public: static std::string SdfParamString(sdf::Element& _sdf,
+    public: static std::string SdfParamString(sdf::v9::Element& _sdf,
       const std::string &_paramName, const std::string _defaultVal);
 
     /// \brief Extract a named Vector2 parameter from an SDF element.
@@ -90,7 +91,7 @@ namespace asv
     /// \param[in] _paramName   The parameter name as it appears in SDF.
     /// \param[in] _defaultVal  A default value for the parameter.
     /// \return                 The parameter value (or default value if not found).
-    public: static Vector2 SdfParamVector2(sdf::Element& _sdf,
+    public: static Vector2 SdfParamVector2(sdf::v9::Element& _sdf,
       const std::string &_paramName, const Vector2 _defaultVal);
 
     /// \brief Extract a named Vector3 parameter from an SDF element.
@@ -99,7 +100,7 @@ namespace asv
     /// \param[in] _paramName   The parameter name as it appears in SDF.
     /// \param[in] _defaultVal  A default value for the parameter.
     /// \return                 The parameter value (or default value if not found).
-    public: static Vector3 SdfParamVector3(sdf::Element& _sdf,
+    public: static Vector3 SdfParamVector3(sdf::v9::Element& _sdf,
       const std::string &_paramName, const Vector3 _defaultVal);
 
     /// \brief Extract a named bool parameter from a Param_V message.

@@ -35,7 +35,7 @@ namespace asv
 
 // This code adapted vmrc/usv_gazebo_plugins/usv_gazebo_dynamics_plugin.cc
 template <typename T>
-T SdfParam(sdf::Element& _sdf, const std::string &_paramName, const T _defaultVal)
+T SdfParam(sdf::v9::Element& _sdf, const std::string &_paramName, const T _defaultVal)
 {
   if (!_sdf.HasElement(_paramName))
   {
@@ -151,38 +151,38 @@ T MsgParam(const gazebo::msgs::Param_V& _msg, const std::string &_paramName, con
 ///////////////////////////////////////////////////////////////////////////////
 // Utilities
 
-bool Utilities::SdfParamBool(sdf::Element& _sdf,
+bool Utilities::SdfParamBool(sdf::v9::Element& _sdf,
   const std::string& _paramName, const bool _defaultVal)
 {
   return SdfParam<bool>(_sdf, _paramName, _defaultVal);
 }
 
-size_t Utilities::SdfParamSizeT(sdf::Element& _sdf,
+size_t Utilities::SdfParamSizeT(sdf::v9::Element& _sdf,
   const std::string& _paramName, const size_t _defaultVal)
 {
   return SdfParam<double>(_sdf, _paramName, _defaultVal);
 }
 
-double Utilities::SdfParamDouble(sdf::Element& _sdf,
+double Utilities::SdfParamDouble(sdf::v9::Element& _sdf,
   const std::string& _paramName, const double _defaultVal)
 {
   return SdfParam<double>(_sdf, _paramName, _defaultVal);
 }
 
-std::string Utilities::SdfParamString(sdf::Element& _sdf,
+std::string Utilities::SdfParamString(sdf::v9::Element& _sdf,
   const std::string& _paramName, const std::string _defaultVal)
 {
   return SdfParam<std::string>(_sdf, _paramName, _defaultVal);
 }
 
-Vector2 Utilities::SdfParamVector2(sdf::Element& _sdf,
+Vector2 Utilities::SdfParamVector2(sdf::v9::Element& _sdf,
   const std::string& _paramName, const Vector2 _defaultVal)
 {
   return ToVector2(SdfParam<ignition::math::Vector2d>(
     _sdf, _paramName, ToIgn(_defaultVal)));
 }
 
-Vector3 Utilities::SdfParamVector3(sdf::Element& _sdf,
+Vector3 Utilities::SdfParamVector3(sdf::v9::Element& _sdf,
   const std::string& _paramName, const Vector3 _defaultVal)
 {
   return ToVector3(SdfParam<ignition::math::Vector3d>(

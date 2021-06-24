@@ -37,7 +37,7 @@
 #include <ignition/math/Vector2.hh>
 #include <ignition/math/Vector3.hh>
 
-#include <tbb/tbb.h>
+//#include <tbb/tbb.h>
 
 #include <array>
 #include <iostream>
@@ -270,7 +270,7 @@ namespace asv
     this->data->Recalculate();
   }
 
-  void WaveParameters::SetFromSDF(sdf::Element& _sdf)
+  void WaveParameters::SetFromSDF(sdf::v9::Element& _sdf)
   {
     this->data->number    = Utilities::SdfParamSizeT(_sdf,    "number",     this->data->number);
     this->data->amplitude = Utilities::SdfParamDouble(_sdf,   "amplitude",  this->data->amplitude);

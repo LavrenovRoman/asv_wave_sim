@@ -29,7 +29,7 @@
 using namespace ignition;
 using namespace math;
 using namespace gazebo;
-using namespace common;
+using namespace gazebo::common;
 using namespace physics;
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -120,7 +120,7 @@ gazebo::physics::WorldPtr LoadASVWorld()
   sdf::SDFPtr sdfWorld = CreateASVWorldSDF();
   gazebo::physics::WorldPtr world = gazebo::physics::create_world();
   gazebo::physics::load_world(world, sdfWorld->Root()->GetElement("world"));
-  gazebo::physics::init_world(world);
+  gazebo::physics::init_world(world, nullptr);
   return world;
 }
 

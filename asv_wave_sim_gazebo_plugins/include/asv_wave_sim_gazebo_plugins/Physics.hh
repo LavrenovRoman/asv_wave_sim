@@ -43,9 +43,8 @@
 #define _ASV_WAVE_SIM_GAZEBO_PLUGINS_PHYSICS_HH_
 
 #include "asv_wave_sim_gazebo_plugins/CGALTypes.hh"
-
 #include <ignition/math/Pose3.hh>
-
+#include <sdf/sdf.hh>
 #include <memory>
 #include <vector>
 
@@ -270,7 +269,7 @@ namespace asv
     /// \brief Set parameters from a SDF tree.
     ///
     /// \param[in] _sdf   A reference to a SDF element.
-    public: void SetFromSDF(sdf::Element& _sdf);
+    public: void SetFromSDF(sdf::v9::Element& _sdf);
 
     /// \brief Print a summary of the hydrodynamics parameters to the gzmsg stream.
     public: void DebugPrint() const;

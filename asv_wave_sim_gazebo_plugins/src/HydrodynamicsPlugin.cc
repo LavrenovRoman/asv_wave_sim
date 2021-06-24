@@ -643,7 +643,7 @@ namespace asv
       ignition::math::Pose3d linkCoMPose = hd->link->WorldCoGPose();
 
       // Water patch grid
-      ignition::math::Box boundingBox = hd->link->CollisionBoundingBox();
+      ignition::math::v6::AxisAlignedBox boundingBox = hd->link->CollisionBoundingBox();
       double patchSize = 1.5 * boundingBox.Size().Length();
       gzmsg << "Water patch size: " << patchSize << std::endl;
       std::shared_ptr<Grid> initWaterPatch(new Grid({patchSize, patchSize}, { 4, 4 }));

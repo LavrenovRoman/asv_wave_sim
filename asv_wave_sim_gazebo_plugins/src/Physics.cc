@@ -463,7 +463,7 @@ namespace asv
     this->data->vRDrag  = Utilities::MsgParamDouble(_msg, "vRDrag",   this->data->vRDrag);
   }
 
-  void HydrodynamicsParameters::SetFromSDF(sdf::Element& _sdf)
+  void HydrodynamicsParameters::SetFromSDF(sdf::v9::Element& _sdf)
   {
     this->data->dampingOn      = Utilities::SdfParamBool(_sdf,  "damping_on",       this->data->dampingOn);
     this->data->viscousDragOn  = Utilities::SdfParamBool(_sdf,  "viscous_drag_on",  this->data->viscousDragOn);
