@@ -71,8 +71,8 @@ or with tests:
 
 ```bash
 cd asv_ws
-catkin_make --cmake-args run_tests
-cd ```
+catkin_make --make-args run_tests
+```
 
 ## Usage
 
@@ -101,7 +101,7 @@ Manually run the tests:
 Launch a Gazebo session with `roslaunch`:
 
 ```bash
-roslaunch asv_wave_gazebo ocean_world.launch verbose:=true
+roslaunch asv_wave_sim_gazebo mumbles_head_world.launch verbose:=true
 ```
 
 Publish a wave parameters message:
